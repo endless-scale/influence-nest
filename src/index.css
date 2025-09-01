@@ -2,41 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Futuristic Cute Pro Design System - Pastel Business Marketplace */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Soft pastels with business edge */
+    --background: 330 25% 97%;
+    --background-glass: 330 25% 97% / 0.8;
+    --background-gradient: linear-gradient(135deg, hsl(330 25% 97%) 0%, hsl(270 20% 96%) 100%);
+    --foreground: 270 15% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system with glassmorphism */
+    --card: 0 0% 100% / 0.7;
+    --card-border: 270 30% 90% / 0.3;
+    --card-foreground: 270 15% 25%;
+    --card-shadow: 270 40% 60% / 0.08;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover glassmorphism */
+    --popover: 0 0% 100% / 0.9;
+    --popover-foreground: 270 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Soft lavender with business confidence */
+    --primary: 270 40% 65%;
+    --primary-glow: 270 50% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-gradient: linear-gradient(135deg, hsl(270 40% 65%) 0%, hsl(290 45% 70%) 100%);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Mint business */
+    --secondary: 150 30% 85%;
+    --secondary-glow: 150 40% 90%;
+    --secondary-foreground: 270 15% 25%;
+    --secondary-gradient: linear-gradient(135deg, hsl(150 30% 85%) 0%, hsl(170 35% 88%) 100%);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Soft pink premium */
+    --accent: 330 40% 85%;
+    --accent-glow: 330 50% 90%;
+    --accent-foreground: 270 15% 25%;
+    --accent-gradient: linear-gradient(135deg, hsl(330 40% 85%) 0%, hsl(310 45% 88%) 100%);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted system */
+    --muted: 270 20% 94%;
+    --muted-foreground: 270 15% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Soft mint */
+    --success: 150 50% 70%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - Soft peach */
+    --warning: 30 60% 75%;
+    --warning-foreground: 270 15% 25%;
 
-    --radius: 0.5rem;
+    /* Destructive - Soft coral */
+    --destructive: 0 50% 75%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Neon accents for CTAs */
+    --neon-pink: 320 70% 80%;
+    --neon-purple: 270 70% 75%;
+    --neon-mint: 150 70% 75%;
+
+    /* Border system */
+    --border: 270 30% 90% / 0.3;
+    --border-strong: 270 30% 85%;
+    --input: 270 30% 95% / 0.5;
+    --ring: 270 40% 65%;
+
+    /* Shadows and glass */
+    --shadow-soft: 0 4px 20px hsl(270 40% 60% / 0.1);
+    --shadow-medium: 0 8px 30px hsl(270 40% 60% / 0.15);
+    --shadow-strong: 0 12px 40px hsl(270 40% 60% / 0.2);
+    --shadow-glow: 0 0 30px hsl(270 50% 75% / 0.3);
+
+    /* Glass effects */
+    --glass-light: rgba(255, 255, 255, 0.1);
+    --glass-medium: rgba(255, 255, 255, 0.15);
+    --glass-strong: rgba(255, 255, 255, 0.25);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,50 +98,116 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - Deep space with neon accents */
+    --background: 260 15% 8%;
+    --background-glass: 260 15% 8% / 0.9;
+    --background-gradient: linear-gradient(135deg, hsl(260 15% 8%) 0%, hsl(280 20% 12%) 100%);
+    --foreground: 300 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 260 20% 15% / 0.8;
+    --card-border: 270 30% 30% / 0.3;
+    --card-foreground: 300 20% 95%;
+    --card-shadow: 270 50% 40% / 0.2;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 260 20% 15% / 0.95;
+    --popover-foreground: 300 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 270 60% 75%;
+    --primary-glow: 270 70% 85%;
+    --primary-foreground: 260 15% 8%;
+    --primary-gradient: linear-gradient(135deg, hsl(270 60% 75%) 0%, hsl(290 65% 80%) 100%);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 50% 70%;
+    --secondary-glow: 150 60% 80%;
+    --secondary-foreground: 260 15% 8%;
+    --secondary-gradient: linear-gradient(135deg, hsl(150 50% 70%) 0%, hsl(170 55% 75%) 100%);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 330 60% 80%;
+    --accent-glow: 330 70% 85%;
+    --accent-foreground: 260 15% 8%;
+    --accent-gradient: linear-gradient(135deg, hsl(330 60% 80%) 0%, hsl(310 65% 85%) 100%);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 260 20% 20%;
+    --muted-foreground: 270 15% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 150 60% 65%;
+    --success-foreground: 260 15% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --warning: 30 70% 70%;
+    --warning-foreground: 260 15% 8%;
+
+    --destructive: 0 60% 70%;
+    --destructive-foreground: 260 15% 8%;
+
+    --neon-pink: 320 80% 85%;
+    --neon-purple: 270 80% 80%;
+    --neon-mint: 150 80% 70%;
+
+    --border: 270 30% 25% / 0.4;
+    --border-strong: 270 30% 30%;
+    --input: 260 20% 20% / 0.7;
+    --ring: 270 60% 75%;
+
+    --shadow-soft: 0 4px 20px hsl(270 60% 20% / 0.3);
+    --shadow-medium: 0 8px 30px hsl(270 60% 15% / 0.4);
+    --shadow-strong: 0 12px 40px hsl(270 60% 10% / 0.5);
+    --shadow-glow: 0 0 40px hsl(270 70% 75% / 0.4);
+
+    --glass-light: rgba(255, 255, 255, 0.05);
+    --glass-medium: rgba(255, 255, 255, 0.1);
+    --glass-strong: rgba(255, 255, 255, 0.15);
+
+    --sidebar-background: 260 20% 15%;
+    --sidebar-foreground: 300 20% 90%;
+    --sidebar-primary: 270 60% 75%;
+    --sidebar-primary-foreground: 260 15% 8%;
+    --sidebar-accent: 260 25% 20%;
+    --sidebar-accent-foreground: 300 20% 90%;
+    --sidebar-border: 270 30% 25%;
+    --sidebar-ring: 270 60% 75%;
   }
 }
 
+/* Custom utility classes for glassmorphism and effects */
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-lg bg-card border border-card-border shadow-lg;
+  }
+  
+  .neon-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .gradient-primary {
+    background: var(--primary-gradient);
+  }
+  
+  .gradient-secondary {
+    background: var(--secondary-gradient);
+  }
+  
+  .gradient-accent {
+    background: var(--accent-gradient);
+  }
+  
+  .gradient-bg {
+    background: var(--background-gradient);
+  }
+}
+
+/* Smooth transitions for all interactive elements */
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-all duration-200;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--background-gradient);
+    min-height: 100vh;
   }
 }
